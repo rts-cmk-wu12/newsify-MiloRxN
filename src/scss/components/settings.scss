@@ -1,0 +1,14 @@
+@use '../placeholders/variables.scss';
+.settings{
+    text-align: center;
+    margin-bottom: 2rem;
+    &__heading{
+        font-size: 2rem;
+        color: variables.$typography-color-cactus;
+        font-family: 'Open Sans', 'sans-serif';
+    }
+
+    &__subheading{
+        font-size: 1.25rem;
+    }
+}

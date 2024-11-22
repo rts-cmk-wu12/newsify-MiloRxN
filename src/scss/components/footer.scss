@@ -1,0 +1,24 @@
+@use '../placeholders/variables.scss';
+.footer {
+  // position: fixed;
+  // bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$primary-color-white;
+
+  &__link {
+    color: variables.$typography-color-onyx;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link--active {
+    color: variables.$secondary-color-cactus;
+  }
+}
