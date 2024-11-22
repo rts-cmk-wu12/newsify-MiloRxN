@@ -1,0 +1,25 @@
+@use '../placeholders/variables.scss';
+
+body.darkmode{
+    background-color: variables.$primary-color-black;
+}
+
+.footer.darkmode{
+    background-color: variables.$primary-color-black;
+}
+
+.darkmode-white-text.darkmode {
+    color: variables.$typography-color-white;
+}
+
+.darkmode-gray-text.darkmode {
+    color: variables.$typography-color-lightGrey;
+}
+
+.darkmode-white-line.darkmode{
+    background-color: variables.$primary-color-white;
+}
+
+.darkmode-gray-input.darkmode{
+    background-color: variables.$secondary-color-lightGrey;
+}

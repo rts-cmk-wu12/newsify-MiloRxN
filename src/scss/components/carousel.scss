@@ -1,0 +1,88 @@
+@use '../placeholders/variables.scss';
+@use '../placeholders/buttons.scss';
+
+.indexwrapper {
+  padding: .5rem;
+}
+
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 96vh;
+}
+
+.carousel {
+  &__container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__slides {
+    display: flex;
+  }
+
+  &__slide {
+    min-width: 100%;
+    text-align: center;
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.125em;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-block: 1rem;
+
+    &__dot {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 3rem;
+      background-color: variables.$secondary-color-gray;
+    }
+
+    .currentDot {
+      width: 3.5rem;
+      background-color: variables.$secondary-color-cactus;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 95%;
+    align-self: center;
+    button{
+      @extend %button;
+
+    }
+  }
+
+  &__skip {
+    @extend %button--transparrent;
+
+    button {
+      @extend %button--transparrent;
+      width: 100%;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,63 @@
+@use '../placeholders/variables.scss';
+
+.category {
+  width: 100%;
+
+  &__details {
+    width: 100%;
+    border-bottom: 2px solid variables.$secondary-color-lightGrey;
+    padding-block: 1rem;
+  }
+
+  &__details:first-of-type {
+    border-top: 2px solid variables.$secondary-color-lightGrey;
+  }
+
+  &__details[open] .category__summary::after {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  &__summary {
+    margin-inline: 1rem;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+
+  }
+
+  &__summary--arrow::after {
+      content: '';
+      background-image: url(/public/images/icons/chevron-down.svg);
+      width: 1.25rem;
+      height: 1.25rem;
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transition: transform 0.3s ease;
+    }
+
+  &__logo {
+    width: 1.25rem;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+  }
+
+  &__article {
+    border-top: 2px solid variables.$secondary-color-lightGrey;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__image {
+    width: 100px;
+    aspect-ratio: 1/1;
+    
+    border-radius: 0.75rem;
+  }
+}

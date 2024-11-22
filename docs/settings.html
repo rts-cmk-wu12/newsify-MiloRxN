@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <script type="module" src="settings.bundle.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__logo" src="./images/newsify_logo.svg" alt="logo">
+        <h1 class="header__title darkmode-white-text">Newsify</h1>
+    </header>
+
+    <main>
+        <section class="settings">
+            <h2 class="settings__heading">Settings</h2>
+            <p class="settings__subheading">Cetegories</p>
+        </section>
+
+        <div class="toggle">
+            
+            <div class="toggle__element">
+                <!-- <div class="toggle__header">
+                    <img class="toggle__logo" src="./images/newsify_logo.svg" alt="logo">
+                    <h3>Category name</h3>
+                </div>
+
+                <label class="toggle__switch">
+                    <input class="toggle__checkbox" type="checkbox">
+                    <span class="toggle__slider"></span>
+                </label> -->
+            </div>
+            
+        </div>
+
+
+        <div class="toggle__darkmode">
+            <button class="toggle__darkmode-button" id="toggle__darkmode">Toggle Dark Mode</button>
+            <small>Version 4.8.15.16.23.42</small>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <a class="footer__link darkmode-white-text" href="home.html">
+            <img class="footer__icon light-mode-image" src="./images/icons/homeGray.svg" alt="home">
+            <img class="footer__icon dark-mode-image" src="./images/icons/homeLightGray.svg" alt="home">
+            Home
+        </a>
+        <a class="footer__link darkmode-white-text" href="archive.html">
+            <img class="footer__icon light-mode-image" src="./images/icons/bookmarkGray.svg" alt="archive">
+            <img class="footer__icon dark-mode-image" src="./images/icons/bookmarkLightGray.svg" alt="archive">
+            Archive
+        </a>
+        <a class="footer__link darkmode-white-text" href="popular.html">
+            <img class="footer__icon light-mode-image" src="./images/icons/starGray.svg" alt="archive">
+            <img class="footer__icon dark-mode-image" src="./images/icons/starLightGray.svg" alt="archive">
+            Popular
+        </a>
+        <a class="footer__link footer__link--active" href="settings.html" aria-current="page">
+            <img class="footer__icon light-mode-image" src="./images/icons/settingsGreen.svg" alt="archive">
+            <img class="footer__icon dark-mode-image" src="./images/icons/settingsGreen.svg" alt="archive">
+            Settings
+        </a>
+    </footer>
+</body>
+
+</html>

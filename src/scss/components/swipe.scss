@@ -1,0 +1,29 @@
+@use '../placeholders/variables.scss';
+
+.category__article {
+    position: relative;
+    overflow: hidden;
+}
+
+.swipe-action-add {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -30%;
+    width: 30%;
+    background: variables.$secondary-color-cactus;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: right 400ms ease-in-out;
+}
+
+.category__article.swiped .swipe-action-add {
+    right: 0;
+}
+
+.swipe-action-add img {
+    width: 2rem;
+    height: 2rem;
+}

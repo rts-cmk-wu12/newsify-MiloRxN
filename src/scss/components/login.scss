@@ -1,0 +1,69 @@
+@use '../placeholders/variables.scss';
+@use '../placeholders/buttons.scss';
+
+.login {
+  &__header {
+    text-align: center;
+    margin-block: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo-container {
+    margin-bottom: 2rem;
+  }
+
+  &__logo {
+    width: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: variables.$typography-color-onyx;
+  }
+
+  &__social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__social-button {
+    @extend %button--socials;
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 3rem 0;
+    width: 100%;
+  }
+
+  &__divider-line {
+    height: 1px;
+    width: 100%;
+    margin-inline: 1rem;
+    background-color: variables.$primary-color-onyx;
+  }
+
+  &__password-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__password-link {
+    @extend %button--socials;
+    background-color: variables.$secondary-color-cactus;
+    color: variables.$primary-color-white;
+  }
+
+  &__signup-link{
+    margin-left: 0.25rem;
+      &--text {
+        text-decoration: none;
+        color: variables.$typography-color-cactus;
+      }
+  }
+}

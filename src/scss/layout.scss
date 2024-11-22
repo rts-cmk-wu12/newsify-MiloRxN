@@ -1,0 +1,13 @@
+@use 'placeholders/reset.scss';
+
+* {
+    @extend %basic-reset;
+}
+
+html {
+    @extend %font-reset;
+}
+
+p + p {
+    @extend %lineheight-reset;
+}

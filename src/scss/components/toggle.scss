@@ -1,0 +1,106 @@
+@use '../placeholders/variables.scss';
+
+// For toggle switch
+$toggle-height: 1.25rem * 1.28;
+$toggle-width: $toggle-height * 2;
+$slider-diameter: $toggle-height * 0.8;
+$slider-offset: $toggle-height * 0.098;
+$transition-duration: 0.4s;
+$border-radius: $toggle-height;
+$slider-border-radius: 50%;
+// ------------------
+
+.toggle {
+  &__element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    border-bottom: 1px solid variables.$secondary-color-gray;
+  }
+
+  &__element:first-of-type {
+    border-top: 1px solid variables.$secondary-color-gray;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
+  }
+
+  &__logo {
+    width: 1.25rem;
+  }
+
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: $toggle-width;
+    height: $toggle-height;
+  }
+
+  &__checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .toggle__slider {
+      background-color: variables.$secondary-color-cactus;
+
+      &:before {
+        transform: translateX($toggle-height);
+      }
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: variables.$secondary-color-lightGrey;
+    transition: $transition-duration;
+    border-radius: $border-radius;
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: $slider-diameter;
+      width: $slider-diameter;
+      left: $slider-offset;
+      bottom: $slider-offset;
+      background-color: variables.$primary-color-white;
+      transition: $transition-duration;
+      border-radius: $slider-border-radius;
+    }
+  }
+
+  &__darkmode {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+    color: variables.$typography-color-lightGrey;
+    // font-size: ;
+
+    &-button {
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 10rem;
+      padding: 1rem 0.5rem;
+      border: 1px solid variables.$secondary-color-cactus;
+      color: variables.$typography-color-cactus;
+      font-weight: 600;
+      background-color: transparent;
+      &:active {
+        transform: scale(0.99);
+        transition: transform 0.1s;
+      }
+    }
+  }
+}
